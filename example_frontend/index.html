@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Fetcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Data Fetcher</h1>
+        
+        <form id="dataForm">
+            <div class="form-group">
+                <label for="studentId">Student ID</label>
+                <input type="text" id="studentId" name="studentId" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="universityId">University ID</label>
+                <input type="text" id="universityId" name="universityId" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="type">Type</label>
+                <input type="text" id="type" name="type" placeholder="Enter type" required>
+            </div>
+            
+            <div class="form-group request-type">
+                <label>Request Method:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="requestMethod" value="GET" checked> GET
+                    </label>
+                    <label>
+                        <input type="radio" name="requestMethod" value="POST"> POST
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit">Send</button>
+        </form>
+        
+        <div class="loading" id="loading">
+            Loading data...
+        </div>
+        
+        <div class="error" id="error">
+            An error occurred while fetching data.
+        </div>
+        
+        <div id="result">
+            <h2>Results</h2>
+            <pre id="resultData"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
